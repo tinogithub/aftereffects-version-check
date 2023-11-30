@@ -1,6 +1,5 @@
-import sys
-import json
-
+import sys, json, os
+from inspect import getsourcefile
 import ctypes  # An included library with Python install.   
 
 BUFFER_SIZE = 40  
@@ -8,7 +7,7 @@ filename = sys.argv[1]
 assert BUFFER_SIZE % 2 == 0
 START_HEADER = b'\x68\x65\x61\x64'
 
-with open('ae-builds.json', 'r') as json_file:
+with open(os.path.dirname(getsourcefile(lambda:0)) + '\\ae-builds.json', 'r') as json_file:
     json_data = json.load(json_file)
 
 hex_version_map = {bytes.fromhex(item['hex']): item['version'] for item in json_data}
