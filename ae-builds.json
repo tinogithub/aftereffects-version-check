@@ -1,10 +1,12 @@
 [
+    {"hex": "005F00060F830E", "version": "2024, v24.6.1 (Mac)" },
     {"hex": "005F00050F4304", "version": "2024, v24.6.0 BETA (Mac)"},
     {"hex": "005F00050F420E", "version": "2024, v24.4.1 (Mac)"},
     {"hex": "005F00050F4206", "version": "2024, v24.4.0 (Mac)"},
     {"hex": "005F00040F410E", "version": "2024, v24.2.1 (Mac)"},
     {"hex": "005F00030F4104", "version": "2024, v24.2.0 BETA (Mac)"},
 
+    {"hex": "005F00060F030E", "version": "2024, v24.6.1 (Win)" },
     {"hex": "005F00050F0304", "version": "2024, v24.6.0 BETA (Win)"},
     {"hex": "005F00050F020E", "version": "2024, v24.4.1 (Win)"},
     {"hex": "005F00050F0206", "version": "2024, v24.4.0 (Win)"},
