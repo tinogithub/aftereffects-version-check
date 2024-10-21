@@ -1,4 +1,19 @@
 [
+    {"hex": "006000010F8884", "version": "2025, v25.1.0 BETA (Mac Arm 64)"},
+    {"hex": "006000010F8806", "version": "2025, v25.0.0 (Mac Arm 64)"},
+    {"hex": "006000010F8804", "version": "2025, v25.0.0 BETA (Mac Arm 64)"},
+
+    {"hex": "006000010F4884", "version": "2025, v25.1.0 BETA (Mac)"},
+    {"hex": "006000010F4806", "version": "2025, v25.0.0 (Mac)"},
+    {"hex": "006000010F4804", "version": "2025, v25.0.0 BETA (Mac)"},
+
+    {"hex": "006000010F0884", "version": "2025, v25.1.0 BETA (Win)"},
+    {"hex": "006000010F0806", "version": "2025, v25.0.0 (Win)"},
+    {"hex": "006000010F0804", "version": "2025, v25.0.0 BETA (Win)"},
+
+    {"hex": "005F00060F831E", "version": "2024, v24.6.3 (Mac Arm 64)"},
+    {"hex": "005F00060F8316", "version": "2024, v24.6.2 (Mac Arm 64)"},
+    {"hex": "005F00060F830E", "version": "2024, v24.6.1 (Mac Arm 64)"},
     {"hex": "005F00050F8304", "version": "2024, v24.6.0 BETA (Mac Arm 64)"},
     {"hex": "005F00050F8286", "version": "2024, v24.5.0 (Mac Arm 64)"},
     {"hex": "005F00050F820E", "version": "2024, v24.4.1 (Mac Arm 64)"},
@@ -6,6 +21,9 @@
     {"hex": "005F00040F810E", "version": "2024, v24.2.1 (Mac Arm 64)"},
     {"hex": "005F00030F8104", "version": "2024, v24.2.0 BETA (Mac Arm 64)"},
 
+    {"hex": "005F00060F431E", "version": "2024, v24.6.3 (Mac)"},
+    {"hex": "005F00060F4316", "version": "2024, v24.6.2 (Mac)"},
+    {"hex": "005F00060F430E", "version": "2024, v24.6.1 (Mac)"},
     {"hex": "005F00050F4304", "version": "2024, v24.6.0 BETA (Mac)"},
     {"hex": "005F00050F4286", "version": "2024, v24.5.0 (Mac)"},
     {"hex": "005F00050F420E", "version": "2024, v24.4.1 (Mac)"},
@@ -13,6 +31,9 @@
     {"hex": "005F00040F410E", "version": "2024, v24.2.1 (Mac)"},
     {"hex": "005F00030F4104", "version": "2024, v24.2.0 BETA (Mac)"},
 
+    {"hex": "005F00060F031E", "version": "2024, v24.6.3 (Win)"},
+    {"hex": "005F00060F0316", "version": "2024, v24.6.2 (Win)"},
+    {"hex": "005F00060F030E", "version": "2024, v24.6.1 (Win)"},
     {"hex": "005F00050F0304", "version": "2024, v24.6.0 BETA (Win)"},
     {"hex": "005F00050F0286", "version": "2024, v24.5.0 (Win)"},
     {"hex": "005F00050F020E", "version": "2024, v24.4.1 (Win)"},
@@ -36,6 +57,7 @@
     {"hex": "005F00010F000E", "version": "2024, v24.0.1 (Win)"},
     {"hex": "005F00010F0006", "version": "2024, v24.0.0 (Win)"},
 
+    {"hex": "005E00090BBB4E", "version": "2023, v23.6.9 (Mac Arm 64)"},
     {"hex": "005E00090BBB36", "version": "2023, v23.6.6 (Mac Arm 64)"},
     {"hex": "005E00090BBB2E", "version": "2023, v23.6.5 (Mac Arm 64)"},
     {"hex": "005E00090BBB16", "version": "2023, v23.6.2 (Mac Arm 64)"},
@@ -47,6 +69,8 @@
     {"hex": "005E00030BB906", "version": "2023, v23.2.0 (Mac Arm 64)"},
     {"hex": "005E00020BB886", "version": "2023, v23.1.0 (Mac Arm 64)"},
     {"hex": "005E00010BB806", "version": "2023, v23.0.0 (Mac Arm 64)"},
+
+    {"hex": "005E00090B7B4E", "version": "2023, v23.6.9 (Mac)"},
     {"hex": "005E00090B7B36", "version": "2023, v23.6.6 (Mac)"},
     {"hex": "005E00090B7B2E", "version": "2023, v23.6.5 (Mac)"},
     {"hex": "005E00090B7B16", "version": "2023, v23.6.2 (Mac)"},
@@ -58,6 +82,8 @@
     {"hex": "005E00030B7906", "version": "2023, v23.2.0 (Mac)"},
     {"hex": "005E00020B7886", "version": "2023, v23.1.0 (Mac)"},
     {"hex": "005E00010B7806", "version": "2023, v23.0.0 (Mac)"},
+
+    {"hex": "005E00090B3B4E", "version": "2023, v23.6.9 (Win)"},
     {"hex": "005E00090B3B36", "version": "2023, v23.6.6 (Win)"},
     {"hex": "005E00090B3B2E", "version": "2023, v23.6.5 (Win)"},
     {"hex": "005E00090B3B16", "version": "2023, v23.6.2 (Win)"},
