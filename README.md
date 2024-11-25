@@ -19,4 +19,17 @@ For example: `py afx-version-check.py aftereffects_projects/2023_23-3-0_build53.
 
 ## Analysis
 
-to be done...
+Example: **17.0.2 (Win) (Build 26)** (Structure is Major.Minor.Patch (OS) (Build) BETA )
+
+At offset 36 in the project file we get a HEX string of **0B 08 16 1A**
+
+![alt text](images/byte-scheme.PNG)
+
+| Bits              | Purpose                                                           |
+|-------------------|-------------------------------------------------------------------|
+| Bit 1-8           | Build                                                             |
+| Bit 10            | If 0 then BETA                                                    |
+| Bit 12-15         | Patch- or Bugfix-Version                                                     |
+| Bit 16-19         | Minor-Version                                                     |
+| Bit 27-31 & 20-22 | Major-Version is split up. MAJOR-A and MAJOR-B have to be merged. |
+| Bit 23-26         | Operation System (Win = 1100, Mac = 1101, Mac Arm 64 = 1110 )     |

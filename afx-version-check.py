@@ -51,7 +51,7 @@ def hex_to_version(hex_string):
     if is_beta(binary_string):
         beta = ' BETA'
 
-    return 'v' + str(major(binary_string)) + '.' + str(minor(binary_string)) + "." + str(patch(binary_string)) + beta + ' (' + str(systemos(binary_string)) + ') (Build ' + str(build(binary_string)) + ')'
+    return 'v' + str(major(binary_string)) + '.' + str(minor(binary_string)) + "." + str(patch(binary_string)) + ' (' + str(systemos(binary_string)) + ') (Build ' + str(build(binary_string)) + ')' + beta
 
 BUFFER_SIZE = 40  
 filename = sys.argv[1]
