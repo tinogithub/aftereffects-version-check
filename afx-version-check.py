@@ -1,16 +1,12 @@
 import sys, binascii
 
-def is_set(x, n):
-    # Check if a bit is set at a given position
-    return x & 1 << n != 0
-
 def hex_to_binary(hex_string):
-    # Create a 64-bit string
+    # Create a 32-bit string
     value = int(hex_string, 16)
     return bin(value)[2:].zfill(32)
 
-def is_beta(myInt):
-    if not is_set(myInt, 9):
+def is_beta(binary_str):
+    if binary_str[22] == '0':
         return True
     return False
 
@@ -27,8 +23,8 @@ def minor(binary_str):
     return minor
 
 def major(binary_str):
-    major_partB = binary_str[9:13]
-    major_partA = binary_str[1:5]
+    major_partB = binary_str[10:13]
+    major_partA = binary_str[3:6]
     major = int(major_partA + major_partB, 2)
 
     return major
@@ -50,11 +46,9 @@ def build(binary_str):
 
 def hex_to_version(hex_string):
     binary_string = hex_to_binary(hex_string)
-    print(binary_string)
-    myInt = int(hex_string, 16)
 
     beta = ''
-    if is_beta(myInt):
+    if is_beta(binary_string):
         beta = ' BETA'
 
     return 'v' + str(major(binary_string)) + '.' + str(minor(binary_string)) + "." + str(patch(binary_string)) + beta + ' (' + str(systemos(binary_string)) + ') (Build ' + str(build(binary_string)) + ')'
@@ -76,7 +70,6 @@ with open(filename, 'rb') as f:
             currBuffer = buffer[36:40]
             converted = binascii.hexlify(bytearray(currBuffer))
             hexstring = converted.decode("utf-8")
-            print(hexstring)
             
             version = hex_to_version(hexstring)
             
