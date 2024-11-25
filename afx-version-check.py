@@ -79,7 +79,6 @@ with open(filename, 'rb') as f:
         else:
             count += 1
             buffer = f.read(BUFFER_SIZE)
-    else:  # while...else
-        # executed if no break
+    else:  
         print("After Effects Build not found.")
         input("Press Enter to continue...")
