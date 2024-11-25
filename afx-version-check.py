@@ -24,7 +24,7 @@ def minor(binary_str):
 
 def major(binary_str):
     major_partB = binary_str[10:13]
-    major_partA = binary_str[3:6]
+    major_partA = binary_str[1:6]
     major = int(major_partA + major_partB, 2)
 
     return major
