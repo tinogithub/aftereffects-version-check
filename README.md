@@ -4,9 +4,9 @@ A Python script to determine the After Effects Version used to save the project.
 
 This script is rewritten and now actually calculates the project version instead of just comparing a HEX string in a data table.
 
-After some more data analysis I finally understood how the project version is encoded in the project file. The analysis will be added later in here.
+After some more data analysis I finally understood how the project version is encoded in the project file. See the analysis below.
 
-I have kept the JSON data for further analysis and to look up the year the software version was released. 
+I have kept the JSON data for further analysis and to look up the year the software version was released.
 
 ## How to run
 
