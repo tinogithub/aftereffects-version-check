@@ -7,41 +7,45 @@ def is_set(x, n):
 def hex_to_binary(hex_string):
     # Create a 64-bit string
     value = int(hex_string, 16)
-    return bin(value)[2:].zfill(64)
+    return bin(value)[2:].zfill(32)
 
 def is_beta(myInt):
-    if not is_set(myInt, 0) and not is_set(myInt, 1):
+    if not is_set(myInt, 1):
         return True
     return False
 
 def patch(binary_str):
-    patch = binary_str[58:61]
+    patch = binary_str[17:21]
     patch = int(patch, 2)
 
     return patch
 
 def minor(binary_str):
-    minor = binary_str[54:57]
+    minor = binary_str[13:17]
     minor = int(minor, 2)
 
     return minor
 
 def major(binary_str):
-    major_partB = binary_str[50:53]
-    major_partA = binary_str[43:46]
+    major_partB = binary_str[9:13]
+    major_partA = binary_str[1:5]
     major = int(major_partA + major_partB, 2)
 
     return major
 
 def systemos(binary_str):
-    if (binary_str[46:50] == '1110'):
+    if (binary_str[6:10] == '1110'):
         return 'Mac Arm 64'
-    if (binary_str[46:50] == '1100'):
+    if (binary_str[6:10] == '1100'):
         return 'Win'
-    if (binary_str[46:50] == '1101'):
+    if (binary_str[6:10] == '1101'):
         return 'Mac'
 
     return 'unknown'
+
+def build(binary_str):
+
+    return int(binary_str[24:], 2)
 
 def hex_to_version(hex_string):
     binary_string = hex_to_binary(hex_string)
@@ -51,7 +55,7 @@ def hex_to_version(hex_string):
     if is_beta(myInt):
         beta = ' BETA'
 
-    return 'v' + str(major(binary_string)) + '.' + str(minor(binary_string)) + "." + str(patch(binary_string)) + beta + ' (' + str(systemos(binary_string)) + ')'
+    return 'v' + str(major(binary_string)) + '.' + str(minor(binary_string)) + "." + str(patch(binary_string)) + beta + ' (' + str(systemos(binary_string)) + ') (Build ' + str(build(binary_string)) + ')'
 
 BUFFER_SIZE = 40  
 filename = sys.argv[1]
@@ -67,16 +71,13 @@ with open(filename, 'rb') as f:
             print("After Effects Version:")
 
             version = "Unknown"
-            currBuffer = buffer[32:39]
+            currBuffer = buffer[36:40]
             converted = binascii.hexlify(bytearray(currBuffer))
             hexstring = converted.decode("utf-8")
-
-            version = hex_to_version(hexstring)
-
-            # At 40 the build number is stored
-            currBuild = ord(buffer[39:40])
             
-            print("After Effects",version,"(Build",currBuild,")")
+            version = hex_to_version(hexstring)
+            
+            print("After Effects",version)
             input("Press Enter to continue...")
             break
         else:
