@@ -10,7 +10,7 @@ def hex_to_binary(hex_string):
     return bin(value)[2:].zfill(32)
 
 def is_beta(myInt):
-    if not is_set(myInt, 1):
+    if not is_set(myInt, 9):
         return True
     return False
 
@@ -34,6 +34,7 @@ def major(binary_str):
     return major
 
 def systemos(binary_str):
+    
     if (binary_str[6:10] == '1110'):
         return 'Mac Arm 64'
     if (binary_str[6:10] == '1100'):
@@ -49,6 +50,7 @@ def build(binary_str):
 
 def hex_to_version(hex_string):
     binary_string = hex_to_binary(hex_string)
+    print(binary_string)
     myInt = int(hex_string, 16)
 
     beta = ''
@@ -74,6 +76,7 @@ with open(filename, 'rb') as f:
             currBuffer = buffer[36:40]
             converted = binascii.hexlify(bytearray(currBuffer))
             hexstring = converted.decode("utf-8")
+            print(hexstring)
             
             version = hex_to_version(hexstring)
             
